@@ -29,7 +29,7 @@
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
       width: 0.8em;
-      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
   </style>
@@ -45,11 +45,11 @@
 
   .callout {
     margin-top: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 1em;  
     border-radius: .25rem;
   }
 
-  .callout.callout-style-simple {
+  .callout.callout-style-simple { 
     padding: 0em 0.5em;
     border-left: solid #acacac .3rem;
     border-right: solid 1px silver;
@@ -100,7 +100,7 @@
     margin-top: 0.5em;
     margin-bottom: 0.5em;
   }
-
+    
   .callout.callout-titled.callout-style-simple .callout-content  p {
     margin-top: 0;
   }
@@ -151,7 +151,7 @@
   .callout-title {
     display: flex
   }
-
+    
   .callout-icon::before {
     margin-top: 1rem;
     padding-right: .5rem;
@@ -263,12 +263,12 @@
     }
     .reveal .footnotes ol {
       counter-reset: ol;
-      list-style-type: none;
+      list-style-type: none; 
       margin-left: 0;
     }
     .reveal .footnotes ol li:before {
       counter-increment: ol;
-      content: counter(ol) ". ";
+      content: counter(ol) ". "; 
     }
     .reveal .footnotes ol li > p:first-child {
       display: inline-block;
@@ -310,19 +310,19 @@
     .reveal .slide > img.r-stretch.quarto-figure-center {
       display: block;
       margin-left: auto;
-      margin-right: auto;
+      margin-right: auto; 
     }
     .reveal .slide > img.stretch.quarto-figure-left,
     .reveal .slide > img.r-stretch.quarto-figure-left  {
       display: block;
       margin-left: 0;
-      margin-right: auto;
+      margin-right: auto; 
     }
     .reveal .slide > img.stretch.quarto-figure-right,
     .reveal .slide > img.r-stretch.quarto-figure-right  {
       display: block;
       margin-left: auto;
-      margin-right: 0;
+      margin-right: 0; 
     }
   </style>
   <script>
@@ -343,7 +343,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Yvik Swan
+Yvik Swan 
 </div>
         <p class="quarto-title-affiliation">
             ENSAI &amp; CREST<span class="math inline">\(^\dagger\)</span>, valentin.patilea@ensai.fr
@@ -351,7 +351,7 @@ Yvik Swan
     </div>
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Jeffrey S. Racine<span class="math inline">\(^\ddagger\)</span>
+Jeffrey S. Racine<span class="math inline">\(^\ddagger\)</span> 
 </div>
         <p class="quarto-title-affiliation">
             McMaster University<span class="math inline">\(^\ddagger\)</span>, racinej@mcmaster.ca
@@ -618,7 +618,7 @@ Jeffrey S. Racine<span class="math inline">\(^\ddagger\)</span>
 - Our method is computationally tractable:
 
     - we have processed millions of curves, each containing hundreds of sample points, on a laptop in real-time as new online data arrives
-
+    
 ::: {.notes}
 - If I were to coin a slogan for this talk, it would be "think vertically!"
 
@@ -637,7 +637,7 @@ Jeffrey S. Racine<span class="math inline">\(^\ddagger\)</span>
     -   @gini_nickl:2010, @cai_low_ma:2014, and @ray:2017, who consider the construction of confidence or credible sets for a single curve of unknown regularity (the latter in a Bayesian framework)
 
     -   @golovkine_klutchnikoff_patilea:2022, who propose a non-smoothing estimator for local regularity of the trajectories of a stochastic process using order statistics (they also adopt a smoothing component, but this relies on an unknown constant $K_0$)
-
+    
 -->
 </section></section>
 <section>
@@ -1393,7 +1393,7 @@ Y^{(i)}_{m(t)}-Y^{(i)}_{m(t-1)}&amp;=X^{(i)}(T^{(i)}_{m(t)})+\varepsilon^{(i)}_{
   <script src="index_files/libs/revealjs/plugin/multiplex/socket.io.js"></script>
   <script src="index_files/libs/revealjs/plugin/multiplex/multiplex.js"></script>
   <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
-
+  
 
   <script src="index_files/libs/revealjs/plugin/notes/notes.js"></script>
   <script src="index_files/libs/revealjs/plugin/search/search.js"></script>
@@ -1415,9 +1415,9 @@ Y^{(i)}_{m(t)}-Y^{(i)}_{m(t-1)}&amp;=X^{(i)}(T^{(i)}_{m(t)})+\varepsilon^{(i)}_{
 'autoAnimateUnmatched': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'chalkboard': {"buttons":true},
-'multiplex': {"secret":null,"id":"f6f0face6e4ed18b","url":"https://reveal-multiplex.glitch.me/"},
+'multiplex': {"secret":"16939793338791757023","id":"f6f0face6e4ed18b","url":"https://reveal-multiplex.glitch.me/"},
 'smaller': false,
-
+ 
         // Display controls in the bottom right corner
         controls: false,
 
@@ -1589,13 +1589,13 @@ Y^{(i)}_{m(t)}-Y^{(i)}_{m(t-1)}&amp;=X^{(i)}(T^{(i)}_{m(t)})+\varepsilon^{(i)}_{
         plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
           RevealMath,
-
+          RevealNotes,
           RevealSearch,
           RevealZoom
         ]
       });
     </script>
-
+    
     <script>
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
@@ -1652,14 +1652,14 @@ Y^{(i)}_{m(t)}-Y^{(i)}_{m(t-1)}&amp;=X^{(i)}(T^{(i)}_{m(t)})+\varepsilon^{(i)}_{
           toggleBodyColorMode(bsSheetEl);
         }
       }
-      toggleBodyColorPrimary();
+      toggleBodyColorPrimary();  
       const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
       tabsets.forEach(function(tabset) {
         const tabby = new Tabby('#' + tabset.id);
       });
       const isCodeAnnotation = (el) => {
         for (const clz of el.classList) {
-          if (clz.startsWith('code-annotation-')) {
+          if (clz.startsWith('code-annotation-')) {                     
             return true;
           }
         }
@@ -1690,11 +1690,11 @@ Y^{(i)}_{m(t)}-Y^{(i)}_{m(t-1)}&amp;=X^{(i)}(T^{(i)}_{m(t)})+\varepsilon^{(i)}_{
           button.setAttribute("data-bs-toggle", "tooltip");
           button.setAttribute("data-bs-placement", "left");
           button.setAttribute("data-bs-title", "Copied!");
-          tooltip = new bootstrap.Tooltip(button,
-            { trigger: "manual",
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
               customClass: "code-copy-button-tooltip",
               offset: [0, -8]});
-          tooltip.show();
+          tooltip.show();    
         }
         setTimeout(function() {
           if (tooltip) {
@@ -1726,7 +1726,7 @@ Y^{(i)}_{m(t)}-Y^{(i)}_{m(t-1)}&amp;=X^{(i)}(T^{(i)}_{m(t)})+\varepsilon^{(i)}_{
         };
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
-        window.tippy(el, config);
+        window.tippy(el, config); 
       }
       const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
       for (var i=0; i<noterefs.length; i++) {
@@ -1793,7 +1793,7 @@ Y^{(i)}_{m(t)}-Y^{(i)}_{m(t-1)}&amp;=X^{(i)}(T^{(i)}_{m(t)})+\varepsilon^{(i)}_{
         }
     });
     </script>
-
-
+    
+    
 
 </body></html>
