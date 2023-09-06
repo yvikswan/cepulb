@@ -1,8 +1,9 @@
 ---
 title: |
-  | CEPULB Test 
+  | Locally Adaptive Online
+  | Functional Data Analysis
 author:
-- Yvik Swan
+- Valentin Patilea$^\dagger$
 - Jeffrey S. Racine$^\ddagger$
 institute:
 - ENSAI & CREST$^\dagger$, valentin.patilea@ensai.fr
@@ -10,8 +11,8 @@ institute:
 date: 08/27/2023
 date-format: full
 editor: source
-# bibliography: slides.bib
-# link-citations: true
+bibliography: slides.bib
+link-citations: true
 ## Pass knitr options like this (otherwise old-school knitr::opt_chunks$set() in an R chunk)
 knitr:
   opts_chunk:

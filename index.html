@@ -10,11 +10,11 @@
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="index_files/libs/quarto-contrib/videojs/video.min.js"></script>
 <link href="index_files/libs/quarto-contrib/videojs/video-js.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.353">
+  <meta name="generator" content="quarto-1.3.450">
 
-  <meta name="author" content="Yvik Swan">
+  <meta name="author" content="Valentin Patilea^\dagger">
   <meta name="author" content="Jeffrey S. Racine^\ddagger">
-  <title>quarto-inputaa8076e4</title>
+  <title>quarto-input9c40de5f</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -29,10 +29,29 @@
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
       width: 0.8em;
-      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css">
   <link rel="stylesheet" href="custom.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -45,11 +64,11 @@
 
   .callout {
     margin-top: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 1em;  
     border-radius: .25rem;
   }
 
-  .callout.callout-style-simple {
+  .callout.callout-style-simple { 
     padding: 0em 0.5em;
     border-left: solid #acacac .3rem;
     border-right: solid 1px silver;
@@ -100,7 +119,7 @@
     margin-top: 0.5em;
     margin-bottom: 0.5em;
   }
-
+    
   .callout.callout-titled.callout-style-simple .callout-content  p {
     margin-top: 0;
   }
@@ -151,7 +170,7 @@
   .callout-title {
     display: flex
   }
-
+    
   .callout-icon::before {
     margin-top: 1rem;
     padding-right: .5rem;
@@ -263,12 +282,12 @@
     }
     .reveal .footnotes ol {
       counter-reset: ol;
-      list-style-type: none;
+      list-style-type: none; 
       margin-left: 0;
     }
     .reveal .footnotes ol li:before {
       counter-increment: ol;
-      content: counter(ol) ". ";
+      content: counter(ol) ". "; 
     }
     .reveal .footnotes ol li > p:first-child {
       display: inline-block;
@@ -310,19 +329,19 @@
     .reveal .slide > img.r-stretch.quarto-figure-center {
       display: block;
       margin-left: auto;
-      margin-right: auto;
+      margin-right: auto; 
     }
     .reveal .slide > img.stretch.quarto-figure-left,
     .reveal .slide > img.r-stretch.quarto-figure-left  {
       display: block;
       margin-left: 0;
-      margin-right: auto;
+      margin-right: auto; 
     }
     .reveal .slide > img.stretch.quarto-figure-right,
     .reveal .slide > img.r-stretch.quarto-figure-right  {
       display: block;
       margin-left: auto;
-      margin-right: 0;
+      margin-right: 0; 
     }
   </style>
   <script>
@@ -338,12 +357,13 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title"><p>CEPULB Test</p></h1>
+  <h1 class="title"><p>Locally Adaptive Online<br>
+Functional Data Analysis</p></h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Yvik Swan
+Valentin Patilea<span class="math inline">\(^\dagger\)</span> 
 </div>
         <p class="quarto-title-affiliation">
             ENSAI &amp; CREST<span class="math inline">\(^\dagger\)</span>, valentin.patilea@ensai.fr
@@ -351,7 +371,7 @@ Yvik Swan
     </div>
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Jeffrey S. Racine<span class="math inline">\(^\ddagger\)</span>
+Jeffrey S. Racine<span class="math inline">\(^\ddagger\)</span> 
 </div>
         <p class="quarto-title-affiliation">
             McMaster University<span class="math inline">\(^\ddagger\)</span>, racinej@mcmaster.ca
@@ -486,7 +506,7 @@ Jeffrey S. Racine<span class="math inline">\(^\ddagger\)</span>
 <li><p>Stop at “The curves may be <em>measured with error</em>”</p></li>
 <li><p>Screen mirror RStudio with manipulate_mfbr.R and walk through the issues</p></li>
 <li><p>Then proceed to discuss what we know and don’t know and “crimes” (assuming smoothness)</p></li>
-<li><p>Some researchers <span class="citation" data-cites="horvath_kokoszka:2012">[@horvath_kokoszka:2012]</span> presume the curves are measured <strong>without error</strong> at <em>any t</em> (unrealistic to say the least, all theory in 5 pages), i.e., they suppose they have the <em>true curves</em> at any point</p></li>
+<li><p>Some researchers <span class="citation" data-cites="horvath_kokoszka:2012">(<a href="#/references-scrollable" role="doc-biblioref" onclick="">Horváth and Kokoszka 2012</a>)</span> presume the curves are measured <strong>without error</strong> at <em>any t</em> (unrealistic to say the least, all theory in 5 pages), i.e., they suppose they have the <em>true curves</em> at any point</p></li>
 <li><p>Sometimes what people do in practice is a <strong>crime</strong>… they smooth discrete points with splines <em>then</em> <strong>proceed presuming they have the true curves</strong> (theory is blindly applied forgetting curves are not the true one - there is no theory on FPCA which corresponds to real data)</p></li>
 </ul>
 <style type="text/css">
@@ -618,7 +638,7 @@ Jeffrey S. Racine<span class="math inline">\(^\ddagger\)</span>
 - Our method is computationally tractable:
 
     - we have processed millions of curves, each containing hundreds of sample points, on a laptop in real-time as new online data arrives
-
+    
 ::: {.notes}
 - If I were to coin a slogan for this talk, it would be "think vertically!"
 
@@ -637,7 +657,7 @@ Jeffrey S. Racine<span class="math inline">\(^\ddagger\)</span>
     -   @gini_nickl:2010, @cai_low_ma:2014, and @ray:2017, who consider the construction of confidence or credible sets for a single curve of unknown regularity (the latter in a Bayesian framework)
 
     -   @golovkine_klutchnikoff_patilea:2022, who propose a non-smoothing estimator for local regularity of the trajectories of a stochastic process using order statistics (they also adopt a smoothing component, but this relies on an unknown constant $K_0$)
-
+    
 -->
 </section></section>
 <section>
@@ -763,7 +783,7 @@ Y^{(i)}_m = X^{(i)}(T^{(i)}_m) + \varepsilon^{(i)}_m,
 <section id="overview" class="slide level2 center">
 <h2>Overview</h2>
 <ul>
-<li class="fragment"><p>“<strong>Smoothness</strong> […] such as the <strong>existence of continuous second derivatives</strong>, is <strong>often imposed for regularization</strong> and is especially useful if nonparametric smoothing techniques are employed, as is prevalent in FDA” <span class="citation" data-cites="wang_chiou_muller:2016">[@wang_chiou_muller:2016]</span></p></li>
+<li class="fragment"><p>“<strong>Smoothness</strong> […] such as the <strong>existence of continuous second derivatives</strong>, is <strong>often imposed for regularization</strong> and is especially useful if nonparametric smoothing techniques are employed, as is prevalent in FDA” <span class="citation" data-cites="wang_chiou_muller:2016">(<a href="#/references-scrollable" role="doc-biblioref" onclick="">Wang, Chiou, and Müller 2016</a>)</span></p></li>
 <li class="fragment"><p>This is problematic since imposing an unknown (and global) degree of smoothness may be incompatible with the underlying stochastic process</p></li>
 <li class="fragment"><p>A key feature of our approach is its data-driven locally adaptive nature</p></li>
 <li class="fragment"><p>We consider a meaningful regularity concept for the data generating process based on probability theory</p></li>
@@ -771,13 +791,13 @@ Y^{(i)}_m = X^{(i)}(T^{(i)}_m) + \varepsilon^{(i)}_m,
 </ul>
 <aside class="notes">
 <ul>
-<li><p>“[w]e make the assumption that the underlying process generating the data is smooth. The observed data are subject to measurement error that may mask this smoothness” <span class="citation" data-cites="levitin_et_al:2007">[@levitin_et_al:2007, pg. 137-138]</span></p></li>
+<li><p>“[w]e make the assumption that the underlying process generating the data is smooth. The observed data are subject to measurement error that may mask this smoothness” <span class="citation" data-cites="levitin_et_al:2007">(<a href="#/references-scrollable" role="doc-biblioref" onclick="">Levitin et al. 2007</a>, pg. 137-138)</span></p></li>
 <li><p>“The assumption that a certain number of derivatives exist has been used in most of the analyses that we have considered. In this way we stabilize estimated principal components, regression functions, monotone transformations, canonical weight functions, and linear differential operators.</p>
-<p>Are there more general concepts of regularity that would aid FDA?” <span class="citation" data-cites="ramsay_silverman:2005">[@ramsay_silverman:2005, pg. 380]</span></p></li>
-<li><p><em>minimax optimal rates for mean and covariance functions</em>, <span class="citation" data-cites="lepski_mammen_spokoiny:1997 cai_yuan:2011">[@lepski_mammen_spokoiny:1997;@cai_yuan:2011]</span>, Cai &amp; Yuam (2010, 11, 12) (see minute 23 of zoom video feb 28 2023)</p></li>
+<p>Are there more general concepts of regularity that would aid FDA?” <span class="citation" data-cites="ramsay_silverman:2005">(<a href="#/references-scrollable" role="doc-biblioref" onclick="">Ramsay and Silverman 2005</a>, pg. 380)</span></p></li>
+<li><p><em>minimax optimal rates for mean and covariance functions</em>, <span class="citation" data-cites="lepski_mammen_spokoiny:1997 cai_yuan:2011">(<a href="#/references-scrollable" role="doc-biblioref" onclick="">Lepski, Mammen, and Spokoiny 1997</a>; <a href="#/references-scrollable" role="doc-biblioref" onclick="">Cai and Yuan 2011</a>)</span>, Cai &amp; Yuam (2010, 11, 12) (see minute 23 of zoom video feb 28 2023)</p></li>
 <li><p>An estimator (estimation rule) is called <strong>minimax</strong> if its <strong>maximal risk is minimal</strong> among all estimators. In a sense this means that it is an estimator which performs best in the worst possible case allowed in the problem</p></li>
-<li><p><em>adaptive confidence bands for nonparametric regression</em> <span class="citation" data-cites="cai_low_ma:2014">[@cai_low_ma:2014]</span> “Ideally, an adaptive confidence band should have its size automatically adjusted to the smoothness of the underlying function, while maintaining a prespecified coverage probability. However as we shall show such a goal is impossible even for Lipschitz function classes and hence a new framework for investigating adaptive confidence bands is needed.”</p></li>
-<li><p><em>decrease of the eigenvalues of the covariance operator, which impacts optimal rates for the regression</em>, for instance <span class="citation" data-cites="belhakem_et_al:2021 hall_horowitz:2007">[@belhakem_et_al:2021;@hall_horowitz:2007]</span> (people say “suppose we know the rate of decrease of the eigenvalues of the covariance matrix operator of the covariates, <span class="math inline">\(\alpha\)</span>, which are functional in this case, but this rate is exactly <span class="math inline">\(2H+1\)</span>, so if we know <span class="math inline">\(H\)</span> we know the rate - it is like saying we know there are two derivatives, we know the <span class="math inline">\(\alpha\)</span>… how do they know that? They don’t!”) (minute 30 in the zoom video)</p></li>
+<li><p><em>adaptive confidence bands for nonparametric regression</em> <span class="citation" data-cites="cai_low_ma:2014">(<a href="#/references-scrollable" role="doc-biblioref" onclick="">Cai, Low, and Ma 2014</a>)</span> “Ideally, an adaptive confidence band should have its size automatically adjusted to the smoothness of the underlying function, while maintaining a prespecified coverage probability. However as we shall show such a goal is impossible even for Lipschitz function classes and hence a new framework for investigating adaptive confidence bands is needed.”</p></li>
+<li><p><em>decrease of the eigenvalues of the covariance operator, which impacts optimal rates for the regression</em>, for instance <span class="citation" data-cites="belhakem_et_al:2021 hall_horowitz:2007">(<a href="#/references-scrollable" role="doc-biblioref" onclick="">Belhakem et al. 2021</a>; <a href="#/references-scrollable" role="doc-biblioref" onclick="">Hall and Horowitz 2007</a>)</span> (people say “suppose we know the rate of decrease of the eigenvalues of the covariance matrix operator of the covariates, <span class="math inline">\(\alpha\)</span>, which are functional in this case, but this rate is exactly <span class="math inline">\(2H+1\)</span>, so if we know <span class="math inline">\(H\)</span> we know the rate - it is like saying we know there are two derivatives, we know the <span class="math inline">\(\alpha\)</span>… how do they know that? They don’t!”) (minute 30 in the zoom video)</p></li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -1144,7 +1164,7 @@ h^*_{t,\Gamma} &amp;=  \left[ \frac{\sigma_t^2 \int K^2(u)du }{4H_t L_t^2\times 
 <ul>
 <li class="fragment"><p>Updated estimators of <span class="math inline">\(\sigma(t)\)</span> and <span class="math inline">\(f_T(t)\)</span> are recursively computable</p></li>
 <li class="fragment"><p>The recursively updated estimators of <span class="math inline">\(h_{t,HL}\)</span>, <span class="math inline">\(h_{t,\mu}\)</span>, <span class="math inline">\(h_{t,\Gamma}\)</span> can then be computed (recall they depend on <span class="math inline">\(H_t\)</span>, <span class="math inline">\(L_t\)</span>, <span class="math inline">\(\sigma(t)\)</span>, and <span class="math inline">\(f_T(t)\)</span>), and call these <span class="math inline">\(\widehat h_{t,HL}^{(i+1)}\)</span>, <span class="math inline">\(\widehat h_{t,\mu}^{(i+1)}\)</span>, and <span class="math inline">\(\widehat h_{t,\Gamma}^{(i+1)}\)</span></p></li>
-<li class="fragment"><p>Using <span class="math inline">\(\widehat h_{t,\mu}^{(i+1)}\)</span> or <span class="math inline">\(\widehat h_{t,\Gamma}^{(i+1)}\)</span> we can estimate <span class="math inline">\(X^{(i+1)}(t)\)</span> and recursively update the estimators of <span class="math inline">\(\mu(t)\)</span> or <span class="math inline">\(\Gamma(s,t)\)</span>, again using <span class="math inline">\(\gamma_{i+1}\)</span> and <span class="citation" data-cites="robbins_munro:1951">@robbins_munro:1951</span> (<span class="math inline">\(\widehat h_{t,HL}^{(i+1)}\)</span> will start the next recursion for <span class="math inline">\(X^{(i+2)}(t)\)</span>, etc.)</p></li>
+<li class="fragment"><p>Using <span class="math inline">\(\widehat h_{t,\mu}^{(i+1)}\)</span> or <span class="math inline">\(\widehat h_{t,\Gamma}^{(i+1)}\)</span> we can estimate <span class="math inline">\(X^{(i+1)}(t)\)</span> and recursively update the estimators of <span class="math inline">\(\mu(t)\)</span> or <span class="math inline">\(\Gamma(s,t)\)</span>, again using <span class="math inline">\(\gamma_{i+1}\)</span> and <span class="citation" data-cites="robbins_munro:1951">Robbins and Monro (<a href="#/references-scrollable" role="doc-biblioref" onclick="">1951</a>)</span> (<span class="math inline">\(\widehat h_{t,HL}^{(i+1)}\)</span> will start the next recursion for <span class="math inline">\(X^{(i+2)}(t)\)</span>, etc.)</p></li>
 <li class="fragment"><p>The “memory footprint” is determined by the grid <span class="math inline">\(\mathcal T_0\subset [0,1]\)</span> (e.g., 100 equidistant points) since we construct estimates of <span class="math inline">\(\mu(\cdot)\)</span>, <span class="math inline">\(\sigma(\cdot)\)</span>, <span class="math inline">\(f_T(\cdot)\)</span> on <span class="math inline">\(\mathcal T_0\)</span> and estimates of <span class="math inline">\(\Gamma(\cdot,\cdot)\)</span> on <span class="math inline">\(\mathcal T_0 \times \mathcal T_0\)</span></p></li>
 <li class="fragment"><p>Thus, our procedures require only that we retain and update vectors and matrices of length <span class="math inline">\(\mathcal T_0\)</span> and dimension <span class="math inline">\(\mathcal T_0 \times \mathcal T_0\)</span></p></li>
 </ul>
@@ -1218,15 +1238,15 @@ h^*_{t,\Gamma} &amp;=  \left[ \frac{\sigma_t^2 \int K^2(u)du }{4H_t L_t^2\times 
 <ul>
 <li class="fragment"><p>Books:</p>
 <ul>
-<li class="fragment"><span class="citation" data-cites="ramsay_silverman:2005">@ramsay_silverman:2005</span>, <span class="citation" data-cites="horvath_kokoszka:2012">@horvath_kokoszka:2012</span>, <span class="citation" data-cites="kokoszka_reimherr:2017">@kokoszka_reimherr:2017</span></li>
+<li class="fragment"><span class="citation" data-cites="ramsay_silverman:2005">Ramsay and Silverman (<a href="#/references-scrollable" role="doc-biblioref" onclick="">2005</a>)</span>, <span class="citation" data-cites="horvath_kokoszka:2012">Horváth and Kokoszka (<a href="#/references-scrollable" role="doc-biblioref" onclick="">2012</a>)</span>, <span class="citation" data-cites="kokoszka_reimherr:2017">Kokoszka and Reimherr (<a href="#/references-scrollable" role="doc-biblioref" onclick="">2017</a>)</span></li>
 </ul></li>
 <li class="fragment"><p>Review Articles:</p>
 <ul>
-<li class="fragment"><span class="citation" data-cites="wang_chiou_muller:2016">@wang_chiou_muller:2016</span>, <span class="citation" data-cites="reiss_et_al:2017">@reiss_et_al:2017</span></li>
+<li class="fragment"><span class="citation" data-cites="wang_chiou_muller:2016">Wang, Chiou, and Müller (<a href="#/references-scrollable" role="doc-biblioref" onclick="">2016</a>)</span>, <span class="citation" data-cites="reiss_et_al:2017">Reiss et al. (<a href="#/references-scrollable" role="doc-biblioref" onclick="">2017</a>)</span></li>
 </ul></li>
 <li class="fragment"><p>R packages:</p>
 <ul>
-<li class="fragment">fda <span class="citation" data-cites="fda">[@fda]</span>, fdapace <span class="citation" data-cites="fdapace">[@fdapace]</span>, fda.usc <span class="citation" data-cites="fda.usc">[@fda.usc]</span></li>
+<li class="fragment">fda <span class="citation" data-cites="fda">(<a href="#/references-scrollable" role="doc-biblioref" onclick="">Ramsay, Graves, and Hooker 2022</a>)</span>, fdapace <span class="citation" data-cites="fdapace">(<a href="#/references-scrollable" role="doc-biblioref" onclick="">Zhou et al. 2022</a>)</span>, fda.usc <span class="citation" data-cites="fda.usc">(<a href="#/references-scrollable" role="doc-biblioref" onclick="">Febrero-Bande and Oviedo de la Fuente 2012</a>)</span></li>
 </ul></li>
 <li class="fragment"><p>FDA CRAN Task View:</p>
 <ul>
@@ -1234,14 +1254,14 @@ h^*_{t,\Gamma} &amp;=  \left[ \frac{\sigma_t^2 \int K^2(u)du }{4H_t L_t^2\times 
 </ul></li>
 <li class="fragment"><p>Applications in Economics:</p>
 <ul>
-<li class="fragment"><span class="citation" data-cites="padilla_segarra_et_al:2020">@padilla_segarra_et_al:2020</span>, <span class="citation" data-cites="tian_renfang:2020">@tian_renfang:2020</span></li>
+<li class="fragment"><span class="citation" data-cites="padilla_segarra_et_al:2020">Padilla-Segarra et al. (<a href="#/references-scrollable" role="doc-biblioref" onclick="">2020</a>)</span>, <span class="citation" data-cites="tian_renfang:2020">Tian, Renfang (<a href="#/references-scrollable" role="doc-biblioref" onclick="">2020</a>)</span></li>
 </ul></li>
 </ul>
 </section>
 <section id="appendix-b-mfbm-gaussian-processes" class="slide level2 center">
 <h2>Appendix B: MfBm Gaussian Processes</h2>
 <ul>
-<li class="fragment"><p>A Multifractional Brownian Motion <span class="citation" data-cites="peltier_vehel:1995">[MfBm, @peltier_vehel:1995]</span>, say <span class="math inline">\((W(t))_{t\geq 0}\)</span>, with Hurst index function <span class="math inline">\(H_t \in(0,1)\)</span>, is a centred Gaussian process with covariance function <span class="math display">\[\begin{equation*}
+<li class="fragment"><p>A Multifractional Brownian Motion <span class="citation" data-cites="peltier_vehel:1995">(MfBm, <a href="#/references-scrollable" role="doc-biblioref" onclick="">Peltier and Lévy Véhel 1995</a>)</span>, say <span class="math inline">\((W(t))_{t\geq 0}\)</span>, with Hurst index function <span class="math inline">\(H_t \in(0,1)\)</span>, is a centred Gaussian process with covariance function <span class="math display">\[\begin{equation*}
 C(s,t) = \mathbb{E}\left[W(s)W(t)\right] =  D(H_s,H_t )\left[ s^{H_s+H_t} +  t^{H_s+H_t} - |t-s|^{H_s+H_t}\right],\, s, t\geq 0,
 \end{equation*}\]</span> where <span class="math display">\[\begin{equation*}
 D(x,y)=\frac{\sqrt{\Gamma (2x+1)\Gamma (2y+1)\sin(\pi x)\sin(\pi y)}} {2\Gamma (x+y+1)\sin(\pi(x+y)/2)}, \, D(x,x) = 1/2,\, x,y &gt;0
@@ -1254,7 +1274,7 @@ H_t = \underline H + \frac{\overline H - \underline H}{1+\exp(- S (t-t_c))}, \qq
 <section id="appendix-b-mfbm-gaussian-processes-cont." class="slide level2 center">
 <h2>Appendix B: MfBm Gaussian Processes Cont.</h2>
 <ul>
-<li class="fragment"><p>The MfBm data are then generated as follows <span class="citation" data-cites="chan_wood:1998">[@chan_wood:1998]</span></p>
+<li class="fragment"><p>The MfBm data are then generated as follows <span class="citation" data-cites="chan_wood:1998">(<a href="#/references-scrollable" role="doc-biblioref" onclick="">Chan and Wood 1998</a>)</span></p>
 <ul>
 <li class="fragment"><p>for each <span class="math inline">\(i\)</span>, an integer <span class="math inline">\(M_i\)</span> is generated as a realization of some random variable with mean <span class="math inline">\(\mathfrak m\)</span> (e.g., Poisson), or <span class="math inline">\(M_i\)</span> could be a constant</p></li>
 <li class="fragment"><p>next, generate <span class="math inline">\(M_i\)</span> independent draws <span class="math inline">\(T_1^{(i)},\ldots,T_{M_i}^{(i)}\)</span> from a uniform random variable on <span class="math inline">\([0,1]\)</span></p></li>
@@ -1369,14 +1389,76 @@ Y^{(i)}_{m(t)}-Y^{(i)}_{m(t-1)}&amp;=X^{(i)}(T^{(i)}_{m(t)})+\varepsilon^{(i)}_{
 \mathbb{E}\left(Y^{(i)}_{m(t)}-Y^{(i)}_{m(t-1)}\right)^2
 &amp;\approx\mathbb{E}\left(\varepsilon^{(i)}_{m(t)}-\varepsilon^{(i)}_{m(t-1)}\right)^2=2\sigma^2(t),
 \end{align*}\]</span> which leads to the expression <span class="math inline">\(\widehat\sigma^2_t=\frac{1}{2N}\sum_{i=1}^N\left(Y^{(i)}_{m(t)}-Y^{(i)}_{m(t-1)}\right)^2\)</span></p></li>
-<li class="fragment"><p>A similar approach has been used in a classical <em>homoscedastic</em> nonparametric setting <span class="citation" data-cites="horowitz_spokoiny:2001">[@horowitz_spokoiny:2001, Equation (2.9)]</span></p></li>
+<li class="fragment"><p>A similar approach has been used in a classical <em>homoscedastic</em> nonparametric setting <span class="citation" data-cites="horowitz_spokoiny:2001">(<a href="#/references-scrollable" role="doc-biblioref" onclick="">Horowitz and Spokoiny 2001</a>, Equation (2.9))</span></p></li>
 <li class="fragment"><p>We modify this for use in an FDA setting, and by exploiting “replication” (i.e., by averaging vertically <em>over all curves</em> at point <span class="math inline">\(t\)</span>) we obtain a simple method for computing the measurement noise variance that allows for heteroscedasticity of unknown form</p></li>
 </ul>
 </section></section>
-<section id="references-scrollable" class="title-slide slide level1 scrollable center">
+<section id="references-scrollable" class="title-slide slide level1 scrollable smaller">
 <h1>References (scrollable)</h1>
 <div class="footer footer-default">
 <p>Locally Adaptive Online FDA | V. Patilea &amp; J. Racine</p>
+</div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-belhakem_et_al:2021" class="csl-entry" role="listitem">
+Belhakem, Ryad, Franck Picard, Vincent Rivoirard, and Angelina Roche. 2021. <span>“Minimax Estimation of Functional Principal Components from Noisy Discretized Functional Data.”</span> https://doi.org/<a href="https://doi.org/10.48550/arXiv.2110.12739">https://doi.org/10.48550/arXiv.2110.12739</a>.
+</div>
+<div id="ref-cai_low_ma:2014" class="csl-entry" role="listitem">
+Cai, T. Tony, Mark Low, and Zongming Ma. 2014. <span>“Adaptive Confidence Bands for Nonparametric Regression Functions.”</span> <em>Journal of the American Statistical Association</em> 109 (507): 1054–70.
+</div>
+<div id="ref-cai_yuan:2011" class="csl-entry" role="listitem">
+Cai, T. Tony, and Ming Yuan. 2011. <span>“<span class="nocase">Optimal estimation of the mean function based on discretely sampled functional data: Phase transition</span>.”</span> <em>The Annals of Statistics</em> 39 (5): 2330–55. <a href="https://doi.org/10.1214/11-AOS898">https://doi.org/10.1214/11-AOS898</a>.
+</div>
+<div id="ref-chan_wood:1998" class="csl-entry" role="listitem">
+Chan, Grace, and Andrew T. A. Wood. 1998. <span>“Simulation of Multifractional Brownian Motion.”</span> In <em>COMPSTAT</em>, edited by Roger Payne and Peter Green, 233–38. Heidelberg: Physica-Verlag HD.
+</div>
+<div id="ref-fda.usc" class="csl-entry" role="listitem">
+Febrero-Bande, Manuel, and Manuel Oviedo de la Fuente. 2012. <span>“Statistical Computing in Functional Data Analysis: The <span>R</span> Package <span class="nocase">fda.usc</span>.”</span> <em>Journal of Statistical Software</em> 51 (4): 1–28. <a href="https://www.jstatsoft.org/v51/i04/">https://www.jstatsoft.org/v51/i04/</a>.
+</div>
+<div id="ref-hall_horowitz:2007" class="csl-entry" role="listitem">
+Hall, Peter, and Joel L. Horowitz. 2007. <span>“Methodology and Convergence Rates for Functional Linear Regression.”</span> <em>The Annals of Statistics</em> 35 (1): 70–91.
+</div>
+<div id="ref-horowitz_spokoiny:2001" class="csl-entry" role="listitem">
+Horowitz, Joel L., and Vladimir G. Spokoiny. 2001. <span>“An Adaptive, Rate-Optimal Test of a Parametric Mean-Regression Model Against a Nonparametric Alternative.”</span> <em>Econometrica</em> 69 (3): 599–631.
+</div>
+<div id="ref-horvath_kokoszka:2012" class="csl-entry" role="listitem">
+Horváth, Lajos, and Piotr Kokoszka. 2012. <em>Inference for Functional Data with Applications</em>. Vol. 200. Springer Series in Statistics. https://doi.org/<a href="https://doi.org/10.1007/978-1-4614-3655-3">https://doi.org/10.1007/978-1-4614-3655-3</a>.
+</div>
+<div id="ref-kokoszka_reimherr:2017" class="csl-entry" role="listitem">
+Kokoszka, P., and M. Reimherr. 2017. 1st ed. Chapman; Hall/CRC. https://doi.org/<a href="https://doi.org/10.1201/9781315117416">https://doi.org/10.1201/9781315117416</a>.
+</div>
+<div id="ref-lepski_mammen_spokoiny:1997" class="csl-entry" role="listitem">
+Lepski, O. V., E. Mammen, and V. G. Spokoiny. 1997. <span>“<span class="nocase">Optimal spatial adaptation to inhomogeneous smoothness: an approach based on kernel estimates with variable bandwidth selectors</span>.”</span> <em>The Annals of Statistics</em> 25 (3): 929–47. <a href="https://doi.org/10.1214/aos/1069362731">https://doi.org/10.1214/aos/1069362731</a>.
+</div>
+<div id="ref-levitin_et_al:2007" class="csl-entry" role="listitem">
+Levitin, Daniel J., Regina L. Nuzzo, Bradley W. Vines, and James O. Ramsay. 2007. <span>“Introduction to Functional Data Analysis.”</span> <em>Canadian Psychology</em> 48: 135–55.
+</div>
+<div id="ref-padilla_segarra_et_al:2020" class="csl-entry" role="listitem">
+Padilla-Segarra, Adrián, Mabel González-Villacorte, Isidro R. Amaro, and Saba Infante. 2020. <span>“Brief Review of Functional Data Analysis: A Case Study on Regional Demographic and Economic Data.”</span> In <em>Information and Communication Technologies</em>, edited by Germania Rodriguez Morales, Efraín R. Fonseca C., Juan Pablo Salgado, Pablo Pérez-Gosende, Marcos Orellana Cordero, and Santiago Berrezueta, 163–76. Cham: Springer International Publishing.
+</div>
+<div id="ref-peltier_vehel:1995" class="csl-entry" role="listitem">
+Peltier, Romain-François, and Jacques Lévy Véhel. 1995. <span>“<span class="nocase">Multifractional Brownian Motion : Definition and Preliminary Results</span>.”</span> Research Report RR-2645. <span>INRIA</span>. <a href="https://hal.inria.fr/inria-00074045">https://hal.inria.fr/inria-00074045</a>.
+</div>
+<div id="ref-fda" class="csl-entry" role="listitem">
+Ramsay, J. O., Spencer Graves, and Giles Hooker. 2022. <em>Fda: Functional Data Analysis</em>. <a href="https://CRAN.R-project.org/package=fda">https://CRAN.R-project.org/package=fda</a>.
+</div>
+<div id="ref-ramsay_silverman:2005" class="csl-entry" role="listitem">
+Ramsay, J. O., and B. W. Silverman. 2005. <em>Functional Data Analysis</em>. 2nd ed. New York: Springer-Verlag.
+</div>
+<div id="ref-reiss_et_al:2017" class="csl-entry" role="listitem">
+Reiss, Philip T., Jeff Goldsmith, Han Lin Shang, and R. Todd Ogden. 2017. <span>“Methods for Scalar-on-Function Regression.”</span> <em>International Statistical Review / Revue Internationale de Statistique</em> 85 (2): 228–49. <a href="http://www.jstor.org/stable/44840886">http://www.jstor.org/stable/44840886</a>.
+</div>
+<div id="ref-robbins_munro:1951" class="csl-entry" role="listitem">
+Robbins, Herbert, and Sutton Monro. 1951. <span>“<span>A Stochastic Approximation Method</span>.”</span> <em>The Annals of Mathematical Statistics</em> 22 (3): 400–407. <a href="https://doi.org/10.1214/aoms/1177729586">https://doi.org/10.1214/aoms/1177729586</a>.
+</div>
+<div id="ref-tian_renfang:2020" class="csl-entry" role="listitem">
+Tian, Renfang. 2020. <span>“On Functional Data Analysis: Methodologies and Applications.”</span> PhD thesis, UWSpace. <a href="http://hdl.handle.net/10012/15811">http://hdl.handle.net/10012/15811</a>.
+</div>
+<div id="ref-wang_chiou_muller:2016" class="csl-entry" role="listitem">
+Wang, Jane-Ling, Jeng-Min Chiou, and Hans-Georg Müller. 2016. <span>“Functional Data Analysis.”</span> <em>Annual Review of Statistics and Its Application</em> 3 (1): 257–95. <a href="https://doi.org/10.1146/annurev-statistics-041715-033624">https://doi.org/10.1146/annurev-statistics-041715-033624</a>.
+</div>
+<div id="ref-fdapace" class="csl-entry" role="listitem">
+Zhou, Yidong, Satarupa Bhattacharjee, Cody Carroll, Yaqing Chen, Xiongtao Dai, Jianing Fan, Alvaro Gajardo, et al. 2022. <em>Fdapace: Functional Data Analysis and Empirical Dynamics</em>. <a href="https://CRAN.R-project.org/package=fdapace">https://CRAN.R-project.org/package=fdapace</a>.
+</div>
 </div>
 </section>
     </div>
@@ -1393,7 +1475,7 @@ Y^{(i)}_{m(t)}-Y^{(i)}_{m(t-1)}&amp;=X^{(i)}(T^{(i)}_{m(t)})+\varepsilon^{(i)}_{
   <script src="index_files/libs/revealjs/plugin/multiplex/socket.io.js"></script>
   <script src="index_files/libs/revealjs/plugin/multiplex/multiplex.js"></script>
   <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
-
+  
 
   <script src="index_files/libs/revealjs/plugin/notes/notes.js"></script>
   <script src="index_files/libs/revealjs/plugin/search/search.js"></script>
@@ -1415,9 +1497,9 @@ Y^{(i)}_{m(t)}-Y^{(i)}_{m(t-1)}&amp;=X^{(i)}(T^{(i)}_{m(t)})+\varepsilon^{(i)}_{
 'autoAnimateUnmatched': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'chalkboard': {"buttons":true},
-'multiplex': {"secret":null,"id":"f6f0face6e4ed18b","url":"https://reveal-multiplex.glitch.me/"},
+'multiplex': {"secret":null,"id":"6812e514e6c6e9a7","url":"https://reveal-multiplex.glitch.me/"},
 'smaller': false,
-
+ 
         // Display controls in the bottom right corner
         controls: false,
 
@@ -1589,13 +1671,13 @@ Y^{(i)}_{m(t)}-Y^{(i)}_{m(t-1)}&amp;=X^{(i)}(T^{(i)}_{m(t)})+\varepsilon^{(i)}_{
         plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
           RevealMath,
-
+          
           RevealSearch,
           RevealZoom
         ]
       });
     </script>
-
+    
     <script>
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
@@ -1652,14 +1734,14 @@ Y^{(i)}_{m(t)}-Y^{(i)}_{m(t-1)}&amp;=X^{(i)}(T^{(i)}_{m(t)})+\varepsilon^{(i)}_{
           toggleBodyColorMode(bsSheetEl);
         }
       }
-      toggleBodyColorPrimary();
+      toggleBodyColorPrimary();  
       const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
       tabsets.forEach(function(tabset) {
         const tabby = new Tabby('#' + tabset.id);
       });
       const isCodeAnnotation = (el) => {
         for (const clz of el.classList) {
-          if (clz.startsWith('code-annotation-')) {
+          if (clz.startsWith('code-annotation-')) {                     
             return true;
           }
         }
@@ -1690,11 +1772,11 @@ Y^{(i)}_{m(t)}-Y^{(i)}_{m(t-1)}&amp;=X^{(i)}(T^{(i)}_{m(t)})+\varepsilon^{(i)}_{
           button.setAttribute("data-bs-toggle", "tooltip");
           button.setAttribute("data-bs-placement", "left");
           button.setAttribute("data-bs-title", "Copied!");
-          tooltip = new bootstrap.Tooltip(button,
-            { trigger: "manual",
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
               customClass: "code-copy-button-tooltip",
               offset: [0, -8]});
-          tooltip.show();
+          tooltip.show();    
         }
         setTimeout(function() {
           if (tooltip) {
@@ -1726,7 +1808,7 @@ Y^{(i)}_{m(t)}-Y^{(i)}_{m(t-1)}&amp;=X^{(i)}(T^{(i)}_{m(t)})+\varepsilon^{(i)}_{
         };
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
-        window.tippy(el, config);
+        window.tippy(el, config); 
       }
       const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
       for (var i=0; i<noterefs.length; i++) {
@@ -1793,7 +1875,7 @@ Y^{(i)}_{m(t)}-Y^{(i)}_{m(t-1)}&amp;=X^{(i)}(T^{(i)}_{m(t)})+\varepsilon^{(i)}_{
         }
     });
     </script>
-
-
+    
+    
 
 </body></html>
